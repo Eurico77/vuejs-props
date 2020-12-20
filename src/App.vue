@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Vamos fazer dar certo " :number="numeros"/>
+   <button @click="mudar">Mudar</button>
   </div>
 </template>
 
@@ -10,8 +11,20 @@ import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      numeros: 4
+    }
+  },
+ 
   components: {
     HelloWorld
+  },
+  methods: {
+    mudar() {
+      this.numeros ++
+    }
+
   }
 }
 </script>
